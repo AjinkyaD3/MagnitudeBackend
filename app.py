@@ -14,7 +14,7 @@ application=app
 
 
 # Load the VADER model
-try:
+try:-
     with open('vader_model.pkl', 'rb') as f:
         sentiment_analyzer = pickle.load(f)
 except FileNotFoundError:
@@ -91,6 +91,5 @@ def analyze():
     })
 
 if __name__ == '__main__':
-    import os
-    port = int(os.environ.get("PORT", 5000))  # Default to 5000 if PORT not set
-    app.run(host="0.0.0.0", port=port, debug=True)
+    
+    app.run(host="0.0.0.0", port=5000, debug=True)
