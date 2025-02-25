@@ -10,6 +10,7 @@ from flask_cors import CORS
 # Create Flask app
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
+application=app
 
 
 # Load the VADER model
