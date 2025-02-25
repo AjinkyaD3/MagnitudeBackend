@@ -14,7 +14,7 @@ application=app
 
 
 # Load the VADER model
-try:-
+try:
     with open('vader_model.pkl', 'rb') as f:
         sentiment_analyzer = pickle.load(f)
 except FileNotFoundError:
